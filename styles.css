@@ -1,0 +1,222 @@
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: radial-gradient(circle, rgba(244, 163, 174, 1), #ffe3e6);
+    transition: background 0.3s ease;
+    position: relative; /* Add this to enable absolute positioning of child elements */
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0.5em;
+  }
+  
+  #adjective {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 0.5em;
+  }
+  
+  #name {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 1.5em;
+  }
+  
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  button {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    margin: 0.5em;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  #special-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 30%;
+  }
+  
+  #mood {
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    padding-left: 20px; /* Add padding to align content to the left */
+    position: absolute; /* Add this */
+    top: 50px; /* Adjust this value to move it closer or further from the top */
+    left: 50px; /* Adjust this value to move it closer or further from the left */
+  }
+  
+  #message-container {
+    text-align: left;
+    max-width: 600px;
+    margin: 1em auto;
+  }
+  
+  #message {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 1em;
+  }
+  
+  .quote {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2em;
+  }
+  
+  #controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+  
+  #home-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 2em;
+    padding: 0.5em 2em;
+    align-self: center; /* Center align the Home button */
+  }
+  
+  body.happy {
+    background: radial-gradient(circle, rgba(246, 223, 164, 1), rgba(202, 184, 228, 1));
+  }
+  
+  body.sad {
+    background: radial-gradient(circle, rgba(210, 218, 227, 1), rgba(143, 174, 178, 1));
+  }
+  
+  body.anxious {
+    background: radial-gradient(circle, rgba(182, 213, 217, 1), rgba(157, 173, 213, 1));
+  }
+  
+  body.frustrated {
+    background: radial-gradient(circle, rgba(221, 240, 227, 1), rgba(237, 163, 163, 1));
+  }
+  
+  body.late-night-thoughts {
+    background: radial-gradient(circle, rgba(234, 240, 221, 1), rgba(158, 154, 201, 1));
+  }
+  
+  button.happy {
+    background-color: rgba(246, 223, 164, 0.7);
+    border-color: rgba(202, 184, 228, 1);
+  }
+  
+  button.sad {
+    background-color: rgba(210, 218, 227, 0.7);
+    border-color: rgba(143, 174, 178, 1);
+  }
+  
+  button.anxious {
+    background-color: rgba(182, 213, 217, 0.7);
+    border-color: rgba(157, 173, 213, 1);
+  }
+  
+  button.frustrated {
+    background-color: rgba(237, 163, 163, 0.7);
+    border-color: rgba(221, 240, 227, 1);
+  }
+  
+  button.late-night-thoughts {
+    background-color: rgba(158, 154, 201, 0.7);
+    border-color: rgba(234, 240, 221, 1);
+  }
+  
+  .mood-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid;
+  }
+  
+  body.happy .mood-button {
+    border-color: rgba(202, 184, 228, 1);
+  }
+  
+  body.sad .mood-button {
+    border-color: rgba(143, 174, 178, 1);
+  }
+  
+  body.anxious .mood-button {
+    border-color: rgba(157, 173, 213, 1);
+  }
+  
+  body.frustrated .mood-button {
+    border-color: rgba(221, 240, 227, 1);
+  }
+  
+  body.late-night-thoughts .mood-button {
+    border-color: rgba(234, 240, 221, 1);
+  }
+  
+  /* Specific styles for Late Night Thoughts */
+  body.late-night-thoughts {
+    background: radial-gradient(circle, rgba(234, 240, 221, 1), rgba(158, 154, 201, 1));
+  }
+  
+  button.late-night-thoughts {
+    background-color: rgba(234, 240, 221, 0.7);
+    border-color: rgba(158, 154, 201, 1);
+  }
+  
+  #special-button {
+    background-color: rgba(234, 240, 221, 0.7);
+    border-color: rgba(158, 154, 201, 1);
+  }
+  
+  #special-button.late-night-thoughts {
+    background-color: rgba(234, 240, 221, 0.7);
+    border-color: rgba(158, 154, 201, 1);
+    margin-top: 1em;
+  }
+  
+  button.late-night-thoughts:hover, #special-button:hover {
+    background-color: rgba(158, 154, 201, 0.3);
+  }
+  
+  button.late-night-thoughts:focus, #special-button:focus {
+    outline: none;
+  }
+  
+  h2 {
+    font-size: 1em;
+    color: white;
+    position: absolute;
+    bottom: 20px; /* Adjust this value to move it closer or further from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

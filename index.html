@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Board</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="home">
+    <h1>Welcome to your moodboard,</h1>
+    <div id="name">진주</div>
+    <div id="buttons">
+      <button class="happy" onclick="navigateToMood('happy')">Happy</button>
+      <button class="sad" onclick="navigateToMood('sad')">Sad</button>
+      <button class="anxious" onclick="navigateToMood('anxious')">Anxious</button>
+      <button class="frustrated" onclick="navigateToMood('frustrated')">Frustrated</button>
+      <button id="special-button" class="late-night-thoughts" onclick="navigateToMood('late-night-thoughts')">Late Night Thoughts</button>
+    </div>
+    <h2>Designed by Diana, Implemented by Mark</h2>
+  </div>
+  
+  <div id="mood" style="display: none;">
+    <h1 id="mood-title"></h1>
+    <div class="adjective" id="adjective">adjective</div>
+    <div id="message-container">
+      <div id="message"></div>
+      <div class="quote" id="quote"></div>
+    </div>
+    <div id="controls">
+      <button class="mood-button" onclick="prevMessage()">Prev.</button>
+      <button class="mood-button" onclick="nextMessage()">Next</button>
+    </div>
+    <button id="home-button" class="mood-button" onclick="goHome()">Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
